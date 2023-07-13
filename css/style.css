@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2a2a72;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;   
+    margin: 2rem 0;     
+}
+
+.user-form,
+.profiles {
+    margin: 0 auto;
+    width: 60%;    
+}
+
+.user-form input {
+    width: 100%;    
+    background-color: #4c2885;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+      0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.user-form input::placeholder {
+    color: #bbb;
+}
+
+.user-form input:focus {
+    outline: none;
+}
+
+.card {
+    width: 100%;
+    background-color: #4c2885;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+      0 15px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 3rem;    
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 10px solid #2a2a72;
+    height: 150px;
+    width: 150px;
+}
+
+.user-info {
+    color: #eee;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+  
+.user-info h2 {
+    margin-top: 0;
+}
+
+
+.user-info ul {
+    width: 50%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0;    
+}
+  
+.user-info ul li {
+    display: flex;
+    align-items: center;    
+}
+  
+.user-info ul li strong {
+    font-size: 0.9rem;
+    margin-left: 0.3rem;
+}
+  
+.repo {    
+    color: #fff;
+    background-color: #212a72;
+    font-size: 0.7rem; 
+    padding: 0.4rem !important;
+    border-radius: 3px;      
+}
+
+.link {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.reposContainer {
+    display: flex;
+    flex-wrap: wrap;    
+    gap: 10px;
+}
+  
+@media (max-width: 500px) {
+    .card {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+  
+    .user-form,
+    .profiles {
+      width: 90%;
+    }
+
+    .user-info {
+        margin-left: 0 !important;        
+    }
+
+    .user-info h2 {
+        margin-top: 15px;          
+    }
+
+    .user-info h2,
+    .user-info p {
+        text-align: center;              
+    }
+}
