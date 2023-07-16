@@ -1,7 +1,4 @@
-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
+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
 
 
-https://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@github.com/e4ma-okafor/github-profiles.git
-
-
-https://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@github.com/e4ma-okafor/alx-low_level_programming.git
+https://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@github.com/e4ma-okafor/alx-low_level_programming.git

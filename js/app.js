@@ -33,6 +33,9 @@ const getUser = (username) => {
                 'userRepos': item.repos_url,                
             }
         })*/
+        console.log(Object.keys(data).length);
+
+        console.log('name: ' + data.name + ', login: ' + data.login.toUpperCase());        
         let card = '';               
         card += `
                 <div class="card">
@@ -65,18 +68,28 @@ const getUser = (username) => {
                     </div>
                 </div>
                 `
-            profiles.innerHTML = card;
+            profiles.innerHTML = card;        
         //displayProfiles(profilesArr);
         getRepos(username);
     })
     .catch(err => {
         console.log(err);
-        let errorMessage = `
+        console.log(typeof err);
+        if (typeof err == 'object' || 'undefined') {
+            let display = `
+                          <div class="card">
+                              <h1>This user does not exist</h1>
+                          </div>
+                          `
+            profiles.innerHTML = display;
+        } else {
+            let errorMessage = `
                            <div class="card">
                                <h1>${err}</h1>
                            </div>
                            `
-        profiles.innerHTML = errorMessage;
+            profiles.innerHTML = errorMessage;
+        }
     })
 }
 //getUser();
